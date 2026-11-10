@@ -90,6 +90,18 @@ namespace Filmek
             MessageBox.Show("Átlag: " + atlag);
         }
 
-        
+        private void scifi_Click(object sender, RoutedEventArgs e)
+        {
+            List<Film> scifi = new List<Film>();
+            foreach(var item in lista)
+            {
+                if (item.Műfaj == "sci-fi".ToUpper())
+                {
+                    scifi.Add(item);
+                }
+            }
+            tabla.ItemsSource = scifi;
+            tabla.Items.Refresh();
+        }
     }
 }
