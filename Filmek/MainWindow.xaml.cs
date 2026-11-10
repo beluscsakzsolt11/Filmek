@@ -49,6 +49,7 @@ namespace Filmek
             lista.Add(new Film("Mátrix", "sci-fi", 136, 8.7));
             lista.Add(new Film("Shrek", "animáció", 90, 7.9));
             tabla.ItemsSource = lista;
+            tabla.Items.Refresh();
         }
 
         //hány film van?
@@ -103,5 +104,10 @@ namespace Filmek
             tabla.ItemsSource = scifi;
             tabla.Items.Refresh();
         }
+
+        //private void csakcim_Click(object sender, RoutedEventArgs e)
+        //{
+        //    tabla.ItemsSource = lista.Select(t => new {Cím = t.Cím }.ToList());
+        //}
     }
 }
