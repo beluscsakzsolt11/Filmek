@@ -105,9 +105,9 @@ namespace Filmek
             tabla.Items.Refresh();
         }
 
-        //private void csakcim_Click(object sender, RoutedEventArgs e)
-        //{
-        //    tabla.ItemsSource = lista.Select(t => new {Cím = t.Cím }.ToList());
-        //}
+        private void cimrendezes(object sender, RoutedEventArgs e)
+        {
+            tabla.ItemsSource = lista.OrderBy(f => f.Cím).ToList();
+        }
     }
 }
