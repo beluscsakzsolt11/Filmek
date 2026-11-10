@@ -73,8 +73,21 @@ namespace Filmek
                 }
             }
             MessageBox.Show("A leghosszabb film: " + leghosszabb.Cím + " (" + leghosszabb.Hossz + " perc)");
-
-
+        }
+        //átlag
+        private void atlag_Click(object sender, RoutedEventArgs e)
+        {
+            double osszeg = 0;
+            foreach(var item in lista)
+            {
+                osszeg += item.Értékelés;
+            }
+            double atlag = 0;
+            foreach(var item in lista)
+            {
+                atlag = osszeg / lista.Count();
+            }
+            MessageBox.Show("Átlag: " + atlag);
         }
 
         
